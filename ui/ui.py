@@ -1,12 +1,14 @@
 import pygame
 from pygame.font import *
 
+
 class UIObject:
-    def __init__(self, screen:pygame.Surface):
+    def __init__(self, screen: pygame.Surface):
         self._screen = screen
 
     def draw(self):
         pass
+
 
 class Text(UIObject):
     def __init__(self, screen, text, fontsize, color):
@@ -26,8 +28,5 @@ class Text(UIObject):
 
     @pos.setter
     def pos(self, value):
-        self.image_rect.x=value[0]
-        self.image_rect.y=value[1]
-
-
-    
+        self.image_rect.x = value[0]
+        self.image_rect.y = value[1]
