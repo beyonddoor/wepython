@@ -1,8 +1,13 @@
 from PIL import Image
 
-image = Image.new('RGBA', (512, 512))
+def getface():
+    face =Image.open('bin/face2.jpeg')
+    face = face.resize((int(face.width/2), int(face.height/2)))
+    return face
 
-face =Image.open('bin/face.png')
+image = Image.new('RGBA', (512, 512))
+face=getface()
+
 image.paste(face)
 
 face2 = face.rotate(45)
